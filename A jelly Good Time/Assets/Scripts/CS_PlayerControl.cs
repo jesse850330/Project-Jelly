@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CS_PlayerControl : MonoBehaviour
 {
-    public float speed = 5.0f;
+    private Transfrom mainCameraTran;
+    private Transfrom cameraDir;
 
     void Start()
     {
 
     }
-
+ 
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0.0f, Input.GetAxis("Vertical") * speed * Time.deltaTime,Space.World);
-    }
 
+    }
 }

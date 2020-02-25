@@ -64,8 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Scripts\CS_AIAttack.cs" />
     <Compile Include="Assets\Scripts\CS_AIJelly.cs" />
-    <Compile Include="Assets\Scripts\CS_AIMove.cs" />
     <Compile Include="Assets\Scripts\CS_FPP.cs" />
     <Compile Include="Assets\Scripts\CS_FPPCamera.cs" />
     <Compile Include="Assets\Scripts\CS_FPPControl.cs" />

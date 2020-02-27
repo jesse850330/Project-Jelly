@@ -396,6 +396,9 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:/Users/845870900/Documents/GitHub/Project-Jelly/A jelly Good Time/Assets/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>

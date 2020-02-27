@@ -6,20 +6,14 @@ namespace ProjectJelly.FPP
 {
     public class CS_AIAttack : MonoBehaviour
     {
-        public const int maxHealth = 100;
-        public int currentHealth = maxHealth;
-        public void TakeDamage(int amount)
+        void Start()
         {
-            currentHealth -= amount;
-            if (currentHealth <= 0)
-            {
-                currentHealth = 0;
-                Destroy(gameObject);
-            }
+
         }
-        void OnTriggerEnter(Collider basic)
+
+        void Update()
         {
-            currentHealth -= 5;
+
         }
 
     }

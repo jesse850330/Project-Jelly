@@ -8,12 +8,26 @@ namespace ProjectJelly.FPP
     {
         Animator anim;
         public float damage;
-        Main target;
+        CS_Crops target;
+        public override void Init()
+        {
+            base.Init();
+            anim = GetComponent<Animator>();
+        }
 
         private void EnemyAttack()
         {
             if (target != null)
             target.Damage(damage);
+        }
+        public override void Death()
+        {
+            base.Death();
+            anim.Play("death");
+        }
+        private void DestorySelf()
+        {
+            Destroy(gameObject);
         }
     }
 }

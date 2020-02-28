@@ -17,11 +17,11 @@ public class CS_DOTween : MonoBehaviour
 
         if (index == 1)
         {
-            transform.DOMove(transform.position + new Vector3(0, 0.1f, 0), 0.1f);
+            transform.DOMove(transform.position + new Vector3(0, 0.5f, 0), 0.5f);
             Invoke("MoveTuBiao2", 1);
         }
         else {
-            transform.DOMove(transform.position - new Vector3(0, 0.1f, 0), 0.1f);
+            transform.DOMove(transform.position - new Vector3(0, 0.5f, 0), 0.5f);
             Invoke("MoveTuBiao1", 1);
         }
         

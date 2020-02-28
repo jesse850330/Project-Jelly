@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -12,7 +10,7 @@ namespace ProjectJelly.FPP
         public float XSensitivity = 2f;
         public float YSensitivity = 2f;
         public bool clampVerticalRotation = true;
-        public float MinimumX = -10F;
+        public float MinimumX = -20F;
         public float MaximumX = 45F;
         public bool smooth;
         public float smoothTime = 5f;

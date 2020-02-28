@@ -13,7 +13,7 @@ namespace ProjectJelly.FPP
             surHP = totalHP;
         }
 
-        public void damage (float damage)
+        public void Damage (float damage)
         {
             if (surHP > damage)
             {

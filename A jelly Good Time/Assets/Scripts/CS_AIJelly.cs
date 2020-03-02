@@ -10,7 +10,8 @@ namespace ProjectJelly.FPP
     public class CS_AIJelly : MonoBehaviour
     {
         NavMeshAgent m_Agent;
-        public Transform CropT;
+        private GameObject target;
+
 
         void Start()
         {
@@ -18,13 +19,13 @@ namespace ProjectJelly.FPP
 
             GameObject[] targets = GameObject.FindGameObjectsWithTag("Crop");
             GameObject ramdomTarget = targets [Random.Range(0, targets.Length)];
-            ramdomTarget = new GameObject("CropT");
+            target = ramdomTarget;
             
         }
 
         void Update()
         {
-            m_Agent.destination = CropT.transform.position; 
+            m_Agent.destination = target.transform.position; 
         }
 
     }

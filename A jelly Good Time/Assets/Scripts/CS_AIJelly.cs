@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace ProjectJelly.FPP
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class CS_AIJelly : MonoBehaviour
     {
-        public Transform goal;
         NavMeshAgent m_Agent;
+        public Transform CropT;
 
         void Start()
         {
             m_Agent = GetComponent<NavMeshAgent>();
+
+            GameObject[] targets = GameObject.FindGameObjectsWithTag("Crop");
+            GameObject ramdomTarget = targets [Random.Range(0, targets.Length)];
+            ramdomTarget = new GameObject("CropT");
+            
         }
 
         void Update()
         {
-            m_Agent.destination = goal.position; 
+            m_Agent.destination = CropT.transform.position; 
         }
 
     }

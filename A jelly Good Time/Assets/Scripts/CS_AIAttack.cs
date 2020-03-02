@@ -6,14 +6,14 @@ namespace ProjectJelly.FPP
 {
     public class CS_AIAttack : CS_HPControl
     {
-        public enum EnemyState
-        {
-            forward,
-            attack,
-            death
-        }
+
 
         Animator anim;
+        public float speed;
+        public float damage;
+        CS_Crops target;
+        public int view;
+
         Rigidbody rigid;
         public EnemyState state;
         Transform eye;
@@ -22,7 +22,7 @@ namespace ProjectJelly.FPP
             base.Init();
             anim = GetComponent<Animator>();
             rigid = GetComponent<Rigidbody>();
-            // gameObject.layer = LayerMask.NameToLayer("Enemy");
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
             state = EnemyState.forward;
             eye = transform.Find("Eye");
         }
@@ -34,17 +34,9 @@ namespace ProjectJelly.FPP
             else if (state == EnemyState.forward)
                 EnemyForward();
         }
-        public int view;
-        CS_Crops target;
+
         private void EnemyForward()
         {
-            // RaycastHit hit;
-            // if (Physics.Raycast(eye.position, transform.forward, out hit, view, LayerMask.GetMask("Crop")))
-            // {
-            //     state = EnemyState.attack;
-            //     anim.Play("attack");
-            //     target = hit.collider.GetComponent<CS_Crops>();
-            // }
             RaycastHit hit;
             if (Physics.Raycast(eye.position, transform.forward, out hit, view, LayerMask.GetMask("Crop")))
             {
@@ -52,6 +44,13 @@ namespace ProjectJelly.FPP
                 anim.Play("attack");
                 target = hit.collider.GetComponent<CS_Crops>();
             }
+        }
+
+        public enum EnemyState
+        {
+            forward,
+            attack,
+            death
         }
 
     }

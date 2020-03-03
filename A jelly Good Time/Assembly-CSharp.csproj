@@ -73,6 +73,9 @@
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\CS_AIAttack.cs" />
     <Compile Include="Assets\Scripts\CS_AIJelly.cs" />
+    <Compile Include="Assets\Scripts\CS_AISpawn.cs" />
+    <Compile Include="Assets\Scripts\CS_AITask.cs" />
+    <Compile Include="Assets\Scripts\CS_Bullet.cs" />
     <Compile Include="Assets\Scripts\CS_Crops.cs" />
     <Compile Include="Assets\Scripts\CS_DOTween.cs" />
     <Compile Include="Assets\Scripts\CS_FPP.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Assets\Scripts\CS_FPPRigiboy.cs" />
     <Compile Include="Assets\Scripts\CS_GameMain.cs" />
     <Compile Include="Assets\Scripts\CS_HPControl.cs" />
+    <Compile Include="Assets\Scripts\CS_Player.cs" />
     <None Include="Assets\DOTween\readme.txt" />
     <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <Reference Include="Unity.Timeline.Editor">

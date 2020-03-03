@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Crop
+  - Enemy
   layers:
   - Default
   - TransparentFX

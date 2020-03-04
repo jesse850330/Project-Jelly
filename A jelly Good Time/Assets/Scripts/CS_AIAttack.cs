@@ -26,20 +26,20 @@ namespace ProjectJelly.FPP
         {
             if (CS_GameMain.instance.gameOver)
                 anim.Play("idle");
-            // else if (state == EnemyState.forward)
-            //     EnemyForward();
+            else if (state == EnemyState.forward)
+                EnemyForward();
         }
 
-        // private void EnemyForward()
-        // {
-        //     RaycastHit hit;
-        //     if (Physics.Raycast(eye.position, transform.forward, out hit, view, LayerMask.GetMask("Crop")))
-        //     {
-        //         state = EnemyState.attack;
-        //         anim.Play("attack");
-        //         target = hit.collider.GetComponent<CS_Crops>();
-        //     }
-        // }
+        private void EnemyForward()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(eye.position, transform.forward, out hit, view, LayerMask.GetMask("Crop")))
+            {
+                state = EnemyState.attack;
+                anim.Play("attack");
+                target = hit.collider.GetComponent<CS_Crops>();
+            }
+        }
 
         public enum EnemyState
         {

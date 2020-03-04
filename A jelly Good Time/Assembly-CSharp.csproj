@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\CS_GameMain.cs" />
     <Compile Include="Assets\Scripts\CS_HPControl.cs" />
     <Compile Include="Assets\Scripts\CS_Player.cs" />
+    <Compile Include="Assets\Scripts\CS_SlotManager.cs" />
     <None Include="Assets\DOTween\readme.txt" />
     <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <Reference Include="Unity.Timeline.Editor">

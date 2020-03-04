@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1881316460247280875}
   - component: {fileID: 1881316460247280874}
   - component: {fileID: 1118886515521790701}
-  - component: {fileID: 6133566988538262010}
   - component: {fileID: 6160625851060811304}
   m_Layer: 0
   m_Name: Jelly
@@ -95,21 +94,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7719569838944553383, guid: c91f32fa791ec1340a02d240388e3098, type: 3}
---- !u!114 &6133566988538262010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881316460247280872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac62510c22a31d47b7fe512b7604830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalHP: 100
-  view: 0
-  state: 0
 --- !u!54 &6160625851060811304
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,14 +135,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3328081304125275071}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.26, y: 0, z: 56.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1881316460247280868}
+  - {fileID: 3876048209744657444}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &3328081304125275065
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -169,7 +154,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.9
-  m_Speed: 5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -193,3 +178,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88aa790c587020844893fc058634c3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5598318392361673295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3876048209744657444}
+  m_Layer: 0
+  m_Name: Eye
+  m_TagString: Eye
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3876048209744657444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598318392361673295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.49360505, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3328081304125275066}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

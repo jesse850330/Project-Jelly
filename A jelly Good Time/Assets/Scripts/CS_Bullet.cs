@@ -5,6 +5,7 @@ using UnityEngine;
 public class CS_Bullet : MonoBehaviour
 {
     public float speed;
+    public AudioClip Jelly;
     private void OnTriggerEnter(Collider other)
     {
         if (other != null)
@@ -23,7 +24,8 @@ public class CS_Bullet : MonoBehaviour
     {
         if (pew.gameObject.tag == "Enemy")
         {
-            Destroy(pew.gameObject);
+            Destroy(pew.gameObject.transform.parent.gameObject);
+            AudioSource.PlayClipAtPoint(Jelly,transform.localPosition);
         }
         
     }

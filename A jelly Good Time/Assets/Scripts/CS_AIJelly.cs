@@ -10,7 +10,10 @@ namespace ProjectJelly.FPP
     public class CS_AIJelly : MonoBehaviour
     {
         NavMeshAgent m_Agent;
-        private GameObject target;
+        private GameObject target = null;
+
+        float pathTime = 0f;
+        int slot = -1;
 
 
         void Start()
@@ -18,14 +21,30 @@ namespace ProjectJelly.FPP
             m_Agent = GetComponent<NavMeshAgent>();
 
             GameObject[] targets = GameObject.FindGameObjectsWithTag("Crop");
-            GameObject ramdomTarget = targets [Random.Range(0, targets.Length)];
+            GameObject ramdomTarget = targets[Random.Range(0, targets.Length)];
             target = ramdomTarget;
-            
+
         }
 
         void Update()
         {
-            m_Agent.destination = target.transform.position; 
+            pathTime += Time.deltaTime;
+            if (pathTime > 0.5f)
+            {
+                pathTime = 0f;
+                var slotManager = target.GetComponent<CS_SlotManager>();
+                if (slotManager != null)
+                {
+                    if (slot == -1)
+                        slot = slotManager.Reserve(gameObject);
+                    if (slot == -1)
+                        return;
+                    var agent = GetComponent<NavMeshAgent>();
+                    if (agent == null)
+                        return;
+                    agent.destination = slotManager.GetSlotPosition(slot);
+                }
+            }
         }
 
     }

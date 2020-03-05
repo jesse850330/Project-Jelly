@@ -2,31 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CS_Bullet : MonoBehaviour
+namespace ProjectJelly.FPP
 {
-    public float speed;
-    public AudioClip Jelly;
-    private void OnTriggerEnter(Collider other)
+    public class CS_Bullet : MonoBehaviour
     {
-        if (other != null)
-        {
-            Destroy(gameObject);
-        }
-    }
+        public float speed;
 
-    void Update()
-    {
-        transform.Translate(0, 0, speed * Time.deltaTime);
-        Destroy(gameObject, 1.25f);
-    }
-
-    void OnCollisionEnter(Collision pew)
-    {
-        if (pew.gameObject.tag == "Enemy")
+        void Update()
         {
-            Destroy(pew.gameObject.transform.parent.gameObject);
-            AudioSource.PlayClipAtPoint(Jelly,transform.localPosition);
+            transform.Translate(0, 0, speed * Time.deltaTime);
+            Destroy(gameObject, 1.25f);
         }
-        
+
     }
 }

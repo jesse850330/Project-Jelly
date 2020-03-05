@@ -9,6 +9,8 @@ namespace ProjectJelly.FPP
 
         public float interval;
         public GameObject Bullet;
+        CS_FPPAttack AIHp;
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -17,6 +19,8 @@ namespace ProjectJelly.FPP
                 Destroy(gameObject);
             }
         }
+
+
 
         IEnumerator FireWeapon()
         {

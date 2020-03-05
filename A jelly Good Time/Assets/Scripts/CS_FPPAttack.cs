@@ -4,30 +4,32 @@ using UnityEngine;
 
 namespace ProjectJelly.FPP
 {
-    public class CS_FPPAttack : CS_HPControl
+    public class CS_FPPAttack : MonoBehaviour
     {
-        Animator anim;
-        public float damage;
-        CS_Crops target;
-        public override void Init()
+        public float AIHp;
+        // public AudioClip Jelly;
+
+        private void OnTriggerEnter(Collider other)
         {
-            base.Init();
-            anim = GetComponent<Animator>();
+            if (other != null)
+            {   
+                AIHp -= 5;
+                print(AIHp);
+            }
+
+
+        }
+        private void Update()
+        {
+
+            if (AIHp <= 0)
+            {
+                Destroy(gameObject.transform.parent.gameObject);
+                // AudioSource.PlayClipAtPoint(Jelly, transform.localPosition);
+            }
+
+
         }
 
-        private void EnemyAttack()
-        {
-            if (target != null)
-            target.Damage(damage);
-        }
-        public override void Death()
-        {
-            base.Death();
-            anim.Play("death");
-        }
-        private void DestorySelf()
-        {
-            Destroy(gameObject);
-        }
     }
 }

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3001070045630882087}
   - component: {fileID: 6124605158957243153}
   - component: {fileID: 559148503736002536}
-  - component: {fileID: 1217453961467939765}
   - component: {fileID: -2114744776570748210}
   - component: {fileID: -7089422096642840193}
+  - component: {fileID: 2890324063071160982}
   m_Layer: 0
   m_Name: Crops
   m_TagString: Untagged
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1217453961467939765
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2305465424419099444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 7018049269314050160, guid: 67f658d8b1d570b40bb579bf650f47c1, type: 3}
 --- !u!114 &-2114744776570748210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +108,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalHP: 100
+--- !u!65 &2890324063071160982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305465424419099444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2004.0736, y: 44.973118, z: 1432.3093}
+  m_Center: {x: 0, y: -0.4606743, z: 0}

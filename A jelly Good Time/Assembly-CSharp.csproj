@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\CS_FPPRigiboy.cs" />
     <Compile Include="Assets\Scripts\CS_GameMain.cs" />
     <Compile Include="Assets\Scripts\CS_HPControl.cs" />
+    <Compile Include="Assets\Scripts\CS_Mallet.cs" />
     <Compile Include="Assets\Scripts\CS_Player.cs" />
     <Compile Include="Assets\Scripts\CS_SlotManager.cs" />
     <None Include="Assets\DOTween\readme.txt" />

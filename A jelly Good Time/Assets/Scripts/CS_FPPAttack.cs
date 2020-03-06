@@ -7,14 +7,18 @@ namespace ProjectJelly.FPP
     public class CS_FPPAttack : MonoBehaviour
     {
         public float AIHp;
+
         // public AudioClip Jelly;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider theCollision)
         {
-            if (other != null)
-            {   
+            if (theCollision.tag == "Bullet")
+            {
                 AIHp -= 5;
-                print(AIHp);
+            }
+            if (theCollision.tag == "Mallet")
+            {
+                AIHp -= 100;
             }
 
 

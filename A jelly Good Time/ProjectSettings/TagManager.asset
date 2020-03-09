@@ -9,6 +9,7 @@ TagManager:
   - Eye
   - Bullet
   - Mallet
+  - Charger
   layers:
   - Default
   - TransparentFX

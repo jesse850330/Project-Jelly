@@ -14,6 +14,8 @@ namespace ProjectJelly.FPP
         public float loadTime = 1.5f;//Reload
         private float currentLoadTime = 0;
         public int chargerCount = 5;//Mags
+        public int abilityCharge = 0;
+        private int charge = 1;
         // public AudioClip Fire;
         // public AudioClip Ability;
         public GameObject Bullet;
@@ -21,11 +23,15 @@ namespace ProjectJelly.FPP
         public GameObject Mallet;
         public GameObject Mallet_Position;
         CS_FPPAttack AIHp;
+        CS_Score Score;
+        private bool Ability1 = false;
+        private bool Ability2 = false;
+        private bool Ability3 = false;
+
 
         void Update()
         {
-
-            if (!isLoading()&& Input.GetKeyDown(KeyCode.Mouse0))
+            if (!isLoading() && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 StartCoroutine(FireWeapon());
             }
@@ -41,7 +47,7 @@ namespace ProjectJelly.FPP
             {
                 reLoading();
             }
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (!MalletIntAbility() && Input.GetKeyDown(KeyCode.Mouse1))
             {
                 StartCoroutine(MalletAbility());
             }
@@ -49,7 +55,47 @@ namespace ProjectJelly.FPP
             {
                 StopAllCoroutines();
             }
+            if (chargerCount >= 0)
+            {
+                CS_Score.c = abilityCharge;
+                CS_Score.y = chargerCount;
+                CS_Score.z = shellCount - currentCount;
+                 CS_Score.AbilityM.text = "Ability: " + CS_Score.c;
+                CS_Score.Mag.text = "Mag: " + CS_Score.y;
+                CS_Score.Ammo.text = "Ammo: " + CS_Score.z;
+            }
+            else
+            {
+                CS_Score.Mag.text = "Mag: " + "Empty";
+                CS_Score.Ammo.text = "Ammo: " + "Out Of Ammo";
+            }
+            if (CS_Score.x >= 50)
+            {
+                if (!Ability1)
+                {
+                    abilityCharge++;
+                    Ability1 = true;
+                }
+            }
+            if (CS_Score.x >= 100)
+            {
+                if (!Ability2)
+                {
+                    abilityCharge++;
+                    Ability2 = true;
+                }
+            }
+            if (CS_Score.x >= 150)
+            {
+                if (!Ability3)
+                {
+                    abilityCharge++;
+                    Ability3 = true;
+                }
+            }
         }
+
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -60,7 +106,7 @@ namespace ProjectJelly.FPP
         }
         public bool isLoading()
         {
-            if (chargerCount == 0) return true;
+            if (chargerCount < 0) return true;
             if (currentCount < shellCount)
             {
                 return false;
@@ -76,11 +122,27 @@ namespace ProjectJelly.FPP
 
         public void reLoading()
         {
-            if (currentCount >= 50)
+            if (currentCount >= shellCount)
             {
                 chargerCount--;
                 currentCount = 0;
             }
+        }
+
+        public bool MalletIntAbility()
+        {
+            if (abilityCharge < 0) return true;
+            if (abilityCharge > 0)
+            {
+                return false;
+            }
+            currentLoadTime += Time.deltaTime;
+            if (currentLoadTime >= loadTime)
+            {
+                currentLoadTime = 0;
+                return false;
+            }
+            return true;
         }
 
         IEnumerator FireWeapon()
@@ -92,7 +154,6 @@ namespace ProjectJelly.FPP
                 // AudioSource.PlayClipAtPoint(Fire, transform.localPosition);
                 yield return new WaitForSeconds(BulletInt);
             }
-
         }
 
         IEnumerator MalletAbility()
@@ -103,6 +164,7 @@ namespace ProjectJelly.FPP
                 pos.y = 2;
                 transform.position = pos;
                 Instantiate(Mallet, Mallet_Position.transform.position = pos, Mallet_Position.transform.rotation);
+                abilityCharge--;
                 // AudioSource.PlayClipAtPoint(Ability, transform.localPosition);
                 yield return new WaitForSeconds(MalletInt);
             }

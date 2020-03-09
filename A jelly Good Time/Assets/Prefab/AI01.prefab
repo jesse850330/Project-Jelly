@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88aa790c587020844893fc058634c3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetE: {fileID: 0}
+  ramdomTarget: 0
 --- !u!1 &4355431738797907912
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,3 +213,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIHp: 40
+  Score: 10

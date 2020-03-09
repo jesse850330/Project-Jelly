@@ -13,19 +13,18 @@ namespace ProjectJelly.FPP
         public Transform[] Points;
         public float Ins_Time = 1;
 
-        void Start()
 
+        void Start()
         {
             InvokeRepeating("Ins_Objs", Ins_Time, Ins_Time);
         }
 
-        void Ins_Objs() 
 
+        void Ins_Objs()
         {
             int Random_Objects = Random.Range(0, Enemys.Length);
             int Random_Points = Random.Range(0, Points.Length);
             Instantiate(Enemys[Random_Objects], Points[Random_Points].transform.position, Points[Random_Points].transform.rotation);
-
         }
 
     }

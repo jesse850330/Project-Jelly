@@ -11,9 +11,10 @@ namespace ProjectJelly.FPP
     {
         NavMeshAgent m_Agent;
         private GameObject target = null;
-
+        public GameObject targetE;
         float pathTime = 0f;
         int slot = -1;
+        public float ramdomTarget;
 
 
         void Start()
@@ -23,6 +24,7 @@ namespace ProjectJelly.FPP
             GameObject[] targets = GameObject.FindGameObjectsWithTag("Crop");
             GameObject ramdomTarget = targets[Random.Range(0, targets.Length)];
             target = ramdomTarget;
+            targetE = target;
 
         }
 

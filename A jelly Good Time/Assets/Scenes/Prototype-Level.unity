@@ -8603,10 +8603,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5acfe49573f54743878f499beedf9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletInt: 0.2
-  MalletInt: 5
-  Fire: {fileID: 8300000, guid: bd9566abdbf08834281bfb4ea8b92a5d, type: 3}
-  Ability: {fileID: 0}
+  BulletInt: 0.1
+  MalletInt: 30
+  shellCount: 50
+  currentCount: 0
+  loadTime: 1.5
+  chargerCount: 5
   Bullet: {fileID: 8156973453788140335, guid: f4df7299472f48c4a9d8309c690e1eee, type: 3}
   Bullet_Position: {fileID: 153545991}
   Mallet: {fileID: 4526341004939173487, guid: 668a73c7ecfb209489d9970131f576a8, type: 3}
@@ -24954,7 +24956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 6
+  m_WalkSpeed: 8
   m_RunSpeed: 10
   m_RunstepLenghten: 0.19
   m_JumpSpeed: 10

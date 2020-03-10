@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4916791381024988978}
   - component: {fileID: 4134573885024462084}
   - component: {fileID: 7664137424862616061}
-  - component: {fileID: 2927785618103310538}
-  - component: {fileID: 3423895893918476123}
-  - component: {fileID: 1985780984562275617}
+  - component: {fileID: 7900051106814892877}
+  - component: {fileID: 4795955129648207094}
+  - component: {fileID: 8173151681713747474}
   m_Layer: 0
   m_Name: Tree2
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8241774703671553313}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8241774703671553313}
-  m_Mesh: {fileID: -4136738323883361016, guid: f3c2eacd9a3b30a43a6fe6ad7314c239, type: 3}
+  m_Mesh: {fileID: -4136738323883361016, guid: 11f47dc9681bf444a8af3255533b0002, type: 3}
 --- !u!23 &7664137424862616061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: f3c2eacd9a3b30a43a6fe6ad7314c239, type: 3}
+  - {fileID: 2100000, guid: dd7f3cf077afbd1458687085b16254ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2927785618103310538
+--- !u!65 &7900051106814892877
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,9 +92,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 140.497, y: 266.4857, z: 158.19972}
-  m_Center: {x: -9.178436, y: 132.4109, z: 1.3533473}
---- !u!65 &3423895893918476123
+  m_Size: {x: 1.4591453, y: 2.0628567, z: 1.5267885}
+  m_Center: {x: -0.102215886, y: 1.032485, z: 0.019387364}
+--- !u!65 &4795955129648207094
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,9 +105,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 608.63635, y: 592.4107, z: 639.9585}
-  m_Center: {x: -14.099097, y: 695.137, z: 0}
---- !u!65 &1985780984562275617
+  m_Size: {x: 6.086364, y: 5.90411, z: 6.3995852}
+  m_Center: {x: -0.14099073, y: 6.961385, z: 0}
+--- !u!65 &8173151681713747474
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,5 +118,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 495.7466, y: 134.8874, z: 456.68146}
-  m_Center: {x: -12.947273, y: 330.69464, z: -5.0344944}
+  m_Size: {x: 4.927827, y: 1.9357891, z: 5.147833}
+  m_Center: {x: -0.14764881, y: 3.0196962, z: -0.013316631}

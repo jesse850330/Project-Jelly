@@ -90,11 +90,9 @@ GameObject:
   - component: {fileID: 5085784078311260738}
   - component: {fileID: 1560740019161759419}
   - component: {fileID: -1611744884643834616}
-  - component: {fileID: 3766236805318424753}
-  - component: {fileID: -1362685519570165291}
   m_Layer: 0
   m_Name: JellyLarge Blue 2
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +168,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978418888344423015}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 40d09b9ad7a767446a36e647e85cc224, type: 2}
   m_CullingMode: 0
@@ -181,34 +179,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &3766236805318424753
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978418888344423015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5394352066211430500, guid: 4039c4a9648b87f43a02afc0d0ad8119, type: 3}
---- !u!114 &-1362685519570165291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978418888344423015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdde0ded52dca6b49abffcc4953b71ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHp: 40
-  Score: 10
 --- !u!1 &991934318597872493
 GameObject:
   m_ObjectHideFlags: 0

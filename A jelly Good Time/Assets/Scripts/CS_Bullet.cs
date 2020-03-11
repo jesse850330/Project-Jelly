@@ -10,7 +10,8 @@ namespace ProjectJelly.FPP
 
         void Update()
         {
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            // transform.Translate(0, 0, speed * Time.deltaTime);
+            transform.Translate(Vector3.forward*speed*Time.deltaTime,Space.Self);
             Destroy(gameObject, 1.25f);
         }
 

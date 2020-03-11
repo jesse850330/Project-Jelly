@@ -90,11 +90,9 @@ GameObject:
   - component: {fileID: 5614044381497325252}
   - component: {fileID: 2221856768775359037}
   - component: {fileID: -5097781172136451907}
-  - component: {fileID: -4734655277020437578}
-  - component: {fileID: 8301860523874004058}
   m_Layer: 0
-  m_Name: Jellynorm Rad
-  m_TagString: Enemy
+  m_Name: Jellynorm updated 1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +168,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498009468642344673}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 40d09b9ad7a767446a36e647e85cc224, type: 2}
   m_CullingMode: 0
@@ -181,34 +179,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-4734655277020437578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498009468642344673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdde0ded52dca6b49abffcc4953b71ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIHp: 25
-  Score: 5
---- !u!64 &8301860523874004058
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498009468642344673}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -782719676789073104, guid: ed3d768f13e914b47b233f12557f1d5c, type: 3}
 --- !u!1 &1066787088665752344
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ namespace ProjectJelly.FPP
         private float currentLoadTime = 0;
         public int chargerCount = 5;//Mags
         public int abilityCharge = 0;
-        private int charge = 1;
+        private int charge;
         // public AudioClip Fire;
         // public AudioClip Ability;
         public GameObject Bullet;
@@ -24,6 +24,7 @@ namespace ProjectJelly.FPP
         public GameObject Mallet_Position;
         CS_FPPAttack AIHp;
         CS_Score Score;
+        // RaycastHit hitInfo;
         private bool Ability1 = false;
         private bool Ability2 = false;
         private bool Ability3 = false;
@@ -60,7 +61,7 @@ namespace ProjectJelly.FPP
                 CS_Score.c = abilityCharge;
                 CS_Score.y = chargerCount;
                 CS_Score.z = shellCount - currentCount;
-                 CS_Score.AbilityM.text = "Ability: " + CS_Score.c;
+                CS_Score.AbilityM.text = "Ability: " + CS_Score.c;
                 CS_Score.Mag.text = "Mag: " + CS_Score.y;
                 CS_Score.Ammo.text = "Ammo: " + CS_Score.z;
             }
@@ -69,7 +70,7 @@ namespace ProjectJelly.FPP
                 CS_Score.Mag.text = "Mag: " + "Empty";
                 CS_Score.Ammo.text = "Ammo: " + "Out Of Ammo";
             }
-            if (CS_Score.x >= 50)
+            if (CS_Score.x >= 25)
             {
                 if (!Ability1)
                 {
@@ -77,7 +78,7 @@ namespace ProjectJelly.FPP
                     Ability1 = true;
                 }
             }
-            if (CS_Score.x >= 100)
+            if (CS_Score.x >= 50)
             {
                 if (!Ability2)
                 {
@@ -85,7 +86,7 @@ namespace ProjectJelly.FPP
                     Ability2 = true;
                 }
             }
-            if (CS_Score.x >= 150)
+            if (CS_Score.x >= 75)
             {
                 if (!Ability3)
                 {
@@ -149,7 +150,18 @@ namespace ProjectJelly.FPP
         {
             while (true)
             {
-                Instantiate(Bullet, Bullet_Position.transform.position, Bullet_Position.transform.rotation);
+                // Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+                // if (Physics.Raycast(ray, out hitInfo))
+                // {
+                //     targetPoint = hitInfo.point;
+                // }
+                // else
+                // {
+
+                //     targetPoint = Camera.main.transform.forward * 1000;
+                // }
+
+                Instantiate(Bullet, Bullet_Position.transform.position, Bullet_Position.transform.rotation); //.transform.LookAt(targetPoint)
                 currentCount++;
                 // AudioSource.PlayClipAtPoint(Fire, transform.localPosition);
                 yield return new WaitForSeconds(BulletInt);

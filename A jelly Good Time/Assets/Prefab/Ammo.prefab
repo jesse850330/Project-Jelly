@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5477191931336410056}
   - component: {fileID: 3556123751059716606}
+  - component: {fileID: 1551396131065074888}
   - component: {fileID: 7090190692562339079}
-  - component: {fileID: 3045444571276502137}
-  - component: {fileID: 32880315818745446}
+  - component: {fileID: 4598008114106722334}
   m_Layer: 0
   m_Name: Ammo
   m_TagString: Bullet
@@ -42,6 +42,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8816285356327940571}
   m_Mesh: {fileID: 5039537646598097726, guid: cc7a525a914afc54ea687cdbffc66b19, type: 3}
+--- !u!114 &1551396131065074888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816285356327940571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9f83e63ad2c4141a11bcd73891a660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 80
 --- !u!23 &7090190692562339079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80,20 +93,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3045444571276502137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8816285356327940571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9f83e63ad2c4141a11bcd73891a660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 80
---- !u!65 &32880315818745446
+--- !u!65 &4598008114106722334
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -20,13 +20,12 @@ GameObject:
   - component: {fileID: 4404245849867229689}
   - component: {fileID: 6840407070105431933}
   - component: {fileID: 753031613805636495}
-  - component: {fileID: 3293120559938328691}
   m_Layer: 0
   m_Name: Crops 1
-  m_TagString: Crop
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5590010953421672143
 Transform:
@@ -205,17 +204,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 23.792826, y: 0.08942014, z: 23.856434}
   m_Center: {x: 0, y: -0.22544551, z: 0.0000009536743}
---- !u!114 &3293120559938328691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8919639099706129628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8239804af7389e045832389537993cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count: 20
-  distance: 5

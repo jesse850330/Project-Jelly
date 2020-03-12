@@ -42,8 +42,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdde0ded52dca6b49abffcc4953b71ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIHp: 20
-  Score: 5
+  AIHp: 25
+  Score: 10
 --- !u!1 &6350622385611873686
 GameObject:
   m_ObjectHideFlags: 0

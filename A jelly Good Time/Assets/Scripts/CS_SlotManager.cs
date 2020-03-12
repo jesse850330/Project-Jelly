@@ -8,7 +8,7 @@ namespace ProjectJelly.FPP
     {
         private List<GameObject> slots;
         public int count = 20;
-        public float distance = 5f;
+        public float distance = 15f;
 
         public Vector3 GetSlotPosition(int index)
         {

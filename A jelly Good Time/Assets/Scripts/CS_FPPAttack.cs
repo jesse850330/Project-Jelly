@@ -9,6 +9,7 @@ namespace ProjectJelly.FPP
         public float AIHp;
         public float Score;
 
+
         // public AudioClip Jelly;
 
         private void OnTriggerEnter(Collider theCollision)
@@ -26,12 +27,12 @@ namespace ProjectJelly.FPP
 
         private void Update()
         {
-
             if (AIHp <= 0)
             {
                 Destroy(gameObject.transform.parent.gameObject);
                 CS_Score.x += Score;
                 CS_Score.Score.text = "Score : " + CS_Score.x;
+                CS_AISpawn.kill++;
                 // AudioSource.PlayClipAtPoint(Jelly, transform.localPosition);
             }
 

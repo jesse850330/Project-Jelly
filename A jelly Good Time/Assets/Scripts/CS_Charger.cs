@@ -6,15 +6,7 @@ namespace ProjectJelly.FPP
 {
     public class CS_Charger : MonoBehaviour
     {
-        Renderer R1;
         public GameObject FireControl;
-
-        void Start()
-        {
-            R1 = gameObject.GetComponent<Renderer>();
-            R1.material.color = Color.green;
-
-        }
 
         void HitByRaycast()
         {
@@ -23,13 +15,7 @@ namespace ProjectJelly.FPP
                 FireControl.GetComponent<CS_Player>().shellCount = 50;
                 FireControl.GetComponent<CS_Player>().chargerCount = 250;
                 FireControl.GetComponent<CS_Player>().currentCount = 0;
-                R1.material.color = Color.red;
             }
-            if (Input.GetKeyUp(KeyCode.E))
-            {
-                R1.material.color = Color.green;
-            }
-
         }
     }
 }

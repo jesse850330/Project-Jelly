@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854020445626882501}
-  - component: {fileID: 854020445626882500}
   m_Layer: 9
   m_Name: GameMain
   m_TagString: Untagged
@@ -31,23 +30,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &854020445626882500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854020445626882503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243ddafaa7dccdd429ccf875105666d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemys:
-  - {fileID: 4355431738659896910, guid: 39c9d8bffc75fd5479880559da0be27f, type: 3}
-  - {fileID: 3328081304125275071, guid: 9ac1b9390d1222f4e93c27eea0a80a15, type: 3}
-  - {fileID: 6350622385611873686, guid: 26f303d76b9e90940a5dc8417be9b3d9, type: 3}
-  Points:
-  - {fileID: 0}
-  - {fileID: 0}
-  Ins_Time: 5

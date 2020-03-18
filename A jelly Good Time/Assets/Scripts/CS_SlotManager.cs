@@ -7,7 +7,7 @@ namespace ProjectJelly.FPP
     public class CS_SlotManager : MonoBehaviour
     {
         private List<GameObject> slots;
-        public int count = 50;
+        public int count = 20;
         public float distance = 5f;
 
         public Vector3 GetSlotPosition(int index)

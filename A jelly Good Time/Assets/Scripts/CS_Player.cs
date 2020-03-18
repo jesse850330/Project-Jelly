@@ -9,13 +9,13 @@ namespace ProjectJelly.FPP
         public float BulletInt;
         public float ReloadInt;
         public float MalletInt;
-        public int shellCount = 50;
+        public int shellCount = 30;
         public int currentCount;
         public int usedCount;
         private float currentFireTime;
         public float loadTime = 1.5f;//Reload
         private float currentLoadTime = 0;
-        public int chargerCount = 250;
+        public int chargerCount = 120;
         public int abilityCharge = 0;
         private int charge;
         // public AudioClip Fire;

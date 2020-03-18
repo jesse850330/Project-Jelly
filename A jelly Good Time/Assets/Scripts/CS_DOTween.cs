@@ -14,6 +14,7 @@ public class CS_DOTween : MonoBehaviour
  
     void Update()
     {
+
         if (index == 1)
         {
             transform.DOMove(transform.position + new Vector3(0, 0.5f, 0), 0.5f);
@@ -22,7 +23,8 @@ public class CS_DOTween : MonoBehaviour
         else {
             transform.DOMove(transform.position - new Vector3(0, 0.5f, 0), 0.5f);
             Invoke("MoveTuBiao1", 1);
-        }        
+        }
+        
     }
  
     private void MoveTuBiao1() {

@@ -15,6 +15,7 @@ namespace ProjectJelly.FPP
         public static float y = 0;
         public static float z = 0;
         public static float c = 0;
+
         void Start()
         {
             Score = GameObject.Find("Score").GetComponent<Text>();

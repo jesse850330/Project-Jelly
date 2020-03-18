@@ -9,7 +9,7 @@ namespace ProjectJelly.FPP
     {
         void Update()
         {
-            Destroy(gameObject, 1.25f);
+            Destroy(gameObject, 1f);
         }
 
     }
